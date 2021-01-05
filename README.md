@@ -1,4 +1,4 @@
-# Youtube-Bot-Views
+# Youtube-Bot-Views (Educational Purpose ONLY)
  - This only intended for Educational purpose, it will be your responsibility, if you use it in real life 
 
 ## A YouTube View Bot, based on proxy rotation, with Java and Selenium.
