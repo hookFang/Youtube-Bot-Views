@@ -3,19 +3,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class Youtube {
+    //Paste your Link here
+    static String linkToVideo = "https://www.youtube.com/watch?v=GrOTZ3wts_I";
+
     public static void main(String[] args) throws InterruptedException, IOException {
         ProxyRetriever tempProxy = new ProxyRetriever();
 
-
         /*Step 1 Web driver*/
+        //Install Chrome Browser
+        //Need to download chrome driver : https://chromedriver.chromium.org/
         System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Chrome Driver\\chromedriver.exe");
 
         /*Web driver*/
@@ -39,7 +41,7 @@ public class Youtube {
                 options.addArguments("--autoplay-policy=no-user-gesture-required");
                 options.setCapability("proxy", proxy);
                 driver = new ChromeDriver(options);
-                driver.get("https://www.youtube.com/watch?v=GrOTZ3wts_I");
+                driver.get(linkToVideo);
                 
             } catch (WebDriverException exception) {
                 proxyList.remove(randomValue);
@@ -47,6 +49,7 @@ public class Youtube {
                 driver.close();
             }
         }
+
         //Time wait specified
         Thread.sleep(1000000);
         driver.quit();
