@@ -6,4 +6,8 @@
   - Planning to create a API that gets free proxy server from particular websites and use these to open browser
 
 ## To run the project 
-    Please ecxecute Youtube.java file
+    - Install Chrome Browser
+    - Need to download chrome driver : https://chromedriver.chromium.org/
+    - Provide the location for Chrome driver .exe file on line 21 to set property
+    
+    - Finally execute Youtube.java file
